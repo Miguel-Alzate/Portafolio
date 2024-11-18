@@ -1,0 +1,110 @@
+/* Navbar */   
+    .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: rgb(209, 75, 26);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: rgb(209, 75, 26) !important;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.collapsing {
+        opacity: 0;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
+    }
+
+
+    @media (max-width: 991px) { 
+        .navbar-collapse {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        
+        .nav-item {
+            margin: 0.5rem 0 !important; 
+            text-align: center;
+        }
+        
+        .navbar-nav {
+            gap: 0.5rem; 
+        }
+
+        .nav-link:hover {
+            background-color: rgba(209, 75, 26, 0.1);
+            border-radius: 5px;
+        }
+    }
+/* End of Navbar */
+
+/* CV Button */
+    .div_descarga {
+        float: right;
+    }
+
+    .div_descarga a {
+        display: inline-block; /* Añadido para mejor control del elemento */
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    #btn_descargar_cv {
+        position: relative; /* Cambiado a position relative */
+        padding: 8px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        overflow: hidden; /* Importante para contener la animación */
+        z-index: 1; /* Para asegurar que el texto esté sobre la animación */
+    }
+
+    #btn_descargar_cv::before { /* Nuevo pseudo-elemento para la animación */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgb(209, 75, 26);
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    #btn_descargar_cv:hover::before {
+        width: 100%;
+    }
+
+    #btn_descargar_cv:hover {
+        color: white;
+        border-color: rgb(209, 75, 26);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(209, 75, 26, 0.3);
+    }
+/* End of CV Button */
+
+
