@@ -1,4 +1,7 @@
-1. Agregar README
+1. Agregar README.
 2. Hacer sticky el navbar y darle mas estilo para el sticky.
-3. Cambiar card para el apartado "sobre mí"
-4. Agregar 3 apartados para el de habilidades; Lenguajes, Herramientas
+3. Cambiar card para el apartado "sobre mí" y agregar foto.
+4. Agregar 3 apartados para el de habilidades:
+    Lenguajes: Python, Java, JavaScript, PHP, MYSQL/SQL.
+    Frameworks: FastAPI, VueJS, NodeJS, Laravel, Bootstrap.
+    Herramientas: Vercel, Render, MySQL Workbench, Notion, Jira, Github.
