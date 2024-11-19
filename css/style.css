@@ -42,6 +42,13 @@
             padding: 20px;
             border-radius: 10px;
             margin-top: 1rem;
+            box-shadow: 
+                0 -5px 20px rgba(209, 75, 26, 0.822), 
+                0 6px 6px rgba(209, 75, 26, 0.2);
+            position: relative;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            background-origin: border-box;
         }
         
         .nav-item {
@@ -52,7 +59,19 @@
         .navbar-nav {
             gap: 0.5rem; 
         }
+        
+        .nav-link:hover {
+            background-color: rgba(209, 75, 26, 0.1);
+            border-radius: 5px;
+        }
+    }
 
+    @media (min-width: 992px) and (max-width: 1040px) { 
+        .nav-item {
+            margin: 0.5rem 0 !important; 
+            text-align: center;
+        }
+        
         .nav-link:hover {
             background-color: rgba(209, 75, 26, 0.1);
             border-radius: 5px;
@@ -108,3 +127,152 @@
 /* End of CV Button */
 
 
+/* Sobre mi */
+    #sobre_mi .social-icon {
+        transition: all 0.3s ease;
+        border-color: rgb(209, 75, 26);
+        color: white;
+    }
+
+    #sobre_mi .social-icon:hover {
+        background-color: rgb(209, 75, 26);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(209, 75, 26, 0.4);
+    }
+
+    #sobre_mi .section-title {
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
+/* End of sobre mi */
+
+/* Habilidades */
+    #habilidades .section-title {
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
+
+    #habilidades{
+        color: white;
+        div{
+            p{
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+
+    .icon{
+        font-size: 40px;
+        margin-bottom: 5px;
+        /* border: 1px solid #0f0f0f; */
+        padding: 5px;
+    }
+
+    .div_habilidad {
+        background: rgba(0, 0, 0, 0.637);
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .div_habilidad:hover {
+        transform: scale(1.05);
+    }
+    
+    .div_html {
+        box-shadow: 1px 1px 5px 0.1px orangered;
+    }
+
+    .div_html:hover {
+        box-shadow: 0 0 15px orangered;
+    }
+    
+    .div_css {
+        box-shadow: 1px 1px 5px 0.1px rgb(20, 72, 184);
+    }
+
+    .div_css:hover {
+        box-shadow: 0 0 15px rgb(20, 72, 184);
+    }
+    
+    .div_bootstrap {
+        box-shadow: 1px 1px 5px 0.1px purple;
+    }
+
+    .div_bootstrap:hover {
+        box-shadow: 0 0 15px purple;
+    }
+    
+    .div_js {
+        box-shadow: 1px 1px 5px 0.1px yellow;
+    }
+
+    .div_js:hover {
+        box-shadow: 0 0 15px yellow;
+    }
+    
+    .div_java {
+        box-shadow: 1px 1px 5px 0.1px red;
+    }
+
+    .div_java:hover {
+        box-shadow: 0 0 15px red;
+    }
+    
+    .div_python {
+        box-shadow: 1px 1px 5px 0.1px rgb(0, 14, 94);
+    }
+
+    .div_python:hover {
+        box-shadow: 0 0 15px rgb(0, 14, 94);
+    }
+    
+    .div_laravel {
+        box-shadow: 1px 1px 5px 0.1px rgb(122, 1, 1);
+    }
+
+    .div_laravel:hover {
+        box-shadow: 0 0 15px rgb(122, 1, 1);
+    }
+    
+    .div_sql {
+        box-shadow: 1px 1px 5px 0.1px rgba(255, 208, 0, 0.925);
+    }
+
+    .div_sql:hover {
+        box-shadow: 0 0 15px rgba(255, 208, 0, 0.925);
+    }
+    
+    /* Estilos para nuevas habilidades */
+    .div_fastapi {
+        box-shadow: 1px 1px 5px 0.1px teal;
+    }
+
+    .div_fastapi:hover {
+        box-shadow: 0 0 15px teal;
+    }
+    
+    .div_vuejs {
+        box-shadow: 1px 1py 5px 0.1px green;
+    }
+
+    .div_vuejs:hover {
+        box-shadow: 0 0 15px green;
+    }
+    
+    .div_nodejs {
+        box-shadow: 1px 1px 5px 0.1px rgb(50, 205, 50);
+    }
+
+    .div_nodejs:hover {
+        box-shadow: 0 0 15px rgb(50, 205, 50);
+    }
+    
+    .div_php {
+        box-shadow: 1px 1px 5px 0.1px purple;
+    }
+
+    .div_php:hover {
+        box-shadow: 0 0 15px purple;
+    }
+/* End of Habilidades */
