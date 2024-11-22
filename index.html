@@ -9,123 +9,133 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="container justify-content-center " style="width: 85%; background-color: #9ca3af">
-    <header>    
-        <nav class="navbar navbar-expand-lg mt-4">
-            <div class="container-fluid">
-                <div class="row justify-content-start align-items-end col-8 col-sm-6 col-lg-4 text-white">
-                    <a style="color: #f9fafb; font-size: 20px; text-decoration: none;" href="#sobre_mi"><strong><p><span><</span> <span id="texto_efecto_typing"></span> <span>/></span></p> </strong></a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav d-flex ms-auto">
-                        <li class="nav-item m-1">
-                            <a class="nav-link text-white fw-bold" href="#sobre_mi">Sobre mí</a>
-                        </li>
-                        <li class="nav-item m-1">
-                            <a class="nav-link text-white fw-bold" href="#proyectos">Proyectos</a>
-                        </li>
-                        <li class="nav-item m-1">
-                            <a class="nav-link text-white fw-bold" href="#habilidades">Habilidades</a>
-                        </li>
-                        <li class="nav-item m-1 div_descarga">    
-                            <a id="btn_descargar_cv" href="" download="">DESCARGAR CV</a> 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>  
-        <div class="row">   
-            <div id="sobre_mi" class="col-12 p-5 mt-4">
-                <div class="row justify-content-center text-center">
-                    <div class="col-12 mb-4">
-                        <h2 class="section-title position-relative d-inline-block text-white pb-2">
-                            Sobre mí
-                            <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color: #475569;"></span>
-                        </h2>
+<body class="container-fluid justify-content-center" style= "background-color: #9ca3af">
+    <div class="container">  
+        <header>    
+            <nav class="navbar navbar-expand-lg mt-4">
+                <div class="container-fluid">
+                    <div class="row justify-content-start align-items-end col-8 col-sm-6 col-lg-4 text-white">
+                        <a style="color: #f9fafb; font-size: 20px; text-decoration: none;" href="#sobre_mi"><strong><p><span><</span> <span id="texto_efecto_typing"></span> <span>/></span></p> </strong></a>
                     </div>
-                    
-                    <div class="col-md-10">
-                        <div class="about-content bg-black p-4 rounded-3 shadow-lg" style="background-color: rgb(0, 0, 0, 0); border: 2px solid">
-                            
-                            <div class="social-links mt-4">
-                                <a href="https://github.com/Miguel-Alzate" target="_blank" 
-                                   class="btn btn-outline-light mx-2 social-icon">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                <a href="https://linkedin.com/in/miguel-angel-alzate-60b612337" target="_blank" 
-                                   class="btn btn-outline-light mx-2 social-icon">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
-                                </a>
-                                <a href="https://w.app/Rn74aC" target="_blank" 
-                                   class="btn btn-outline-light mx-2 social-icon">
-                                    <i class="fab fa-whatsapp"></i> WhatsApp
-                                </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span><i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav d-flex ms-auto">
+                            <li class="nav-item m-1">
+                                <a class="nav-link text-white fw-bold" href="#sobre_mi">Sobre mí</a>
+                            </li>
+                            <li class="nav-item m-1">
+                                <a class="nav-link text-white fw-bold" href="#proyectos">Proyectos</a>
+                            </li>
+                            <li class="nav-item m-1">
+                                <a class="nav-link text-white fw-bold" href="#habilidades">Habilidades</a>
+                            </li>
+                            <li class="nav-item m-1 div_descarga">    
+                                <a id="btn_descargar_cv" href="" download="">DESCARGAR CV</a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <main>  
+            <div class="row">   
+                <div id="sobre_mi" class="col-12 p-5 mt-4">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12 mb-3">
+                            <h2 class="section-title position-relative d-inline-block text-white pb-2">
+                                Sobre mí
+                                <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color: #475569;"></span>
+                            </h2>
+                        </div>
+                        <div class="profile-image-container text-center mb-4">
+                            <img src="img/profile.jpg" alt="Profile Picture" class="profile-image">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="about-content bg-black p-4 rounded-3 shadow-lg" style="background-color: rgb(0, 0, 0, 0); border: 2px solid">
+                                <p>Soy un desarrollador de software especializado en backend, actualmente cursando el programa de Análisis y Desarrollo de Software del SENA. Mi pasión se centra en construir soluciones tecnológicas robustas y eficientes, con un enfoque particular en el desarrollo de sistemas backend que impulsan el rendimiento y la funcionalidad de aplicaciones web y móviles.</p>
+                                <div class="social-links mt-4">
+                                    <a href="https://github.com/Miguel-Alzate" target="_blank" 
+                                       class="btn btn-outline-light mx-2 social-icon">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                    <a href="https://linkedin.com/in/miguel-angel-alzate-60b612337" target="_blank" 
+                                       class="btn btn-outline-light mx-2 social-icon">
+                                        <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                    <a href="https://w.app/Rn74aC" target="_blank" 
+                                       class="btn btn-outline-light mx-2 social-icon">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-    
-            <div class="col-12 mt-4 p-5" id="proyectos">
-                <div class="row justify-content-center text-center">
-                    <div class="col-12 mb-4">
-                        <h2 class="section-title position-relative d-inline-block text-white pb-2">
-                            Proyectos
-                            <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color:  #475569;"></span>
-                        </h2>
+        
+                <div class="col-12 mt-4 p-5" id="proyectos">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12 mb-4">
+                            <h2 class="section-title position-relative d-inline-block text-white pb-2">
+                                Proyectos
+                                <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color:  #475569;"></span>
+                            </h2>
+                        </div>
                     </div>
                 </div>
+        
+                <div class="col-12 mt-4 p-5" id="habilidades">  
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12 mb-4">
+                            <h2 class="section-title position-relative d-inline-block text-white pb-2">
+                                Habilidades
+                                <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color:  #475569;"></span>
+                            </h2>
+                        </div>
+                        <div class="col-md-10"> 
+                            <!-- <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class="div_html div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-html5" style="color:rgb(255, 123, 0)"></i>HTML</p>
+                            </div>
+                            <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class=" div_css div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-css3-alt" style="color: rgb(20, 72, 184);"></i>CSS </p>
+                            </div>
+                            <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class="div_bootstrap div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-bootstrap" style="color:purple"></i>BOOTSTRAP </p>
+                            </div>
+                            <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class="div_js  div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-js" style="color: yellow;"></i>JAVASCRIPT </p>
+                            </div>
+                            <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class="div_java div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-java" style="color: red;"></i>JAVA </p>
+                            </div>
+                            <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class="div_python div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-python"></i>PYTHON </p>
+                            </div>
+                            <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class="div_laravel div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-laravel"></i>LARAVEL </p>
+                            </div>
+                            <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
+                                <p class="div_sql py-2 div_habilidad px-0 rounded"><i class="icon fa-solid fa-database" style="color: rgba(255, 208, 0, 0.925);"></i>SQL </p>
+                            </div> -->
+                        </div>
+                    </div>             
+                </div>
             </div>
-    
-            <div class="col-12 mt-4 p-5" id="habilidades">  
-                <div class="row justify-content-center text-center">
-                    <div class="col-12 mb-4">
-                        <h2 class="section-title position-relative d-inline-block text-white pb-2">
-                            Habilidades
-                            <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color:  #475569;"></span>
-                        </h2>
-                    </div>
-                    <div class="col-md-10"> 
-                        <!-- <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class="div_html div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-html5" style="color:rgb(255, 123, 0)"></i>HTML</p>
-                        </div>
-                        <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class=" div_css div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-css3-alt" style="color: rgb(20, 72, 184);"></i>CSS </p>
-                        </div>
-                        <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class="div_bootstrap div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-bootstrap" style="color:purple"></i>BOOTSTRAP </p>
-                        </div>
-                        <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class="div_js  div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-js" style="color: yellow;"></i>JAVASCRIPT </p>
-                        </div>
-                        <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class="div_java div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-java" style="color: red;"></i>JAVA </p>
-                        </div>
-                        <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class="div_python div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-python"></i>PYTHON </p>
-                        </div>
-                        <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class="div_laravel div_habilidad py-2 px-0 rounded"><i class="icon fa-brands fa-laravel"></i>LARAVEL </p>
-                        </div>
-                        <div class="col-sm-2 col-4 pt-3 mx-3 mb-3">
-                            <p class="div_sql py-2 div_habilidad px-0 rounded"><i class="icon fa-solid fa-database" style="color: rgba(255, 208, 0, 0.925);"></i>SQL </p>
-                        </div> -->
-                    </div>
-                </div>             
+        </main>
+    </div>   
+       
+    <footer id="footer" class="mt-5 mb-2 text-center">    
+        <div class="container">
+            <h5 class="">Miguel Angel Alzate</h5>
+            <div class="copyright">
+                &copy; 2024 Miguel Angel Alzate. Todos los derechos reservados. <br>    
+                :)
             </div>
         </div>
-    </main>
-
-
-    <footer class="footer">
-
     </footer>
+    
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>

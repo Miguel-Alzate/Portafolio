@@ -18,13 +18,11 @@
         }
     }
 
-    /* Ensure text readability */
     body, h1, h2, h3, .text-white {
         color: white !important;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
 
-    /* Maintain hover and interaction states */
     .nav-link:hover {
         color: #ffffff !important;
         background-color: rgba(51, 65, 85, 0.6);
@@ -36,15 +34,10 @@
         width: 100%;
     }
 
-    /* Adjust section backgrounds for better contrast */
     #sobre_mi, #proyectos, #habilidades {
         background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
     }
-
-
-
-
 /* Navbar */   
     .nav-link {
         position: relative;
@@ -81,7 +74,6 @@
     .navbar-collapse.show {
         opacity: 1;
     }
-
 
     @media (max-width: 991px) { 
         .navbar-collapse {
@@ -171,7 +163,6 @@
     }
 /* End of CV Button */
 
-
 /* Sobre mi */
     #sobre_mi {
         background: rgba(31, 41, 55, 0.4) !important;
@@ -185,6 +176,27 @@
         background: rgba(31, 41, 55, 0.6) !important;
         border-color: rgba(255, 255, 255, 0.2);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-image-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #334155;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .profile-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
     }
 
     #sobre_mi .about-content {
@@ -217,138 +229,85 @@
         height: 2px;
         background: linear-gradient(to right, transparent, #334155, transparent);
     }
-        
 /* End of sobre mi */
 
-/* Habilidades */
-    #habilidades .section-title {
-        font-weight: normal;
-        letter-spacing: 1px;
+/* Estilos para Proyectos */    
+    #proyectos {
+        background: rgba(31, 41, 55, 0.4) !important;
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        border: 2px solid rgba(51, 65, 85, 0.5);
+        transition: all 0.3s ease;
     }
 
-    #habilidades{
+    #proyectos:hover {
+        background: rgba(31, 41, 55, 0.6) !important;
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    #proyectos .section-title {
+        position: relative;
+        display: inline-block;
         color: white;
-        div{
-            p{
-                display: grid;
-                place-items: center;
-            }
-        }
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
     }
 
-    .icon{
-        font-size: 40px;
-        margin-bottom: 5px;
-        /* border: 1px solid #0f0f0f; */
-        padding: 5px;
-    }
-
-    .div_habilidad {
-        background: rgba(0, 0, 0, 0.637);
+    #proyectos .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
         width: 100%;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .div_habilidad:hover {
-        transform: scale(1.05);
-        background-color: rgba(51, 65, 85, 0.7);
-    }
-        
-    .div_html {
-        box-shadow: 1px 1px 5px 0.1px orangered;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #334155, transparent);
     }
 
-    .div_html:hover {
-        box-shadow: 0 0 15px orangered;
+    #proyectos .projects-content {
+        background: transparent !important;
+        border: none !important;
     }
-    
-    .div_css {
-        box-shadow: 1px 1px 5px 0.1px rgb(20, 72, 184);
+/* End of proyectos */
+
+
+/* Habilidades */
+    #habilidades {
+        background: rgba(31, 41, 55, 0.4) !important;
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        border: 2px solid rgba(51, 65, 85, 0.5);
+        transition: all 0.3s ease;
     }
 
-    .div_css:hover {
-        box-shadow: 0 0 15px rgb(20, 72, 184);
-    }
-    
-    .div_bootstrap {
-        box-shadow: 1px 1px 5px 0.1px purple;
+    #habilidades:hover {
+        background: rgba(31, 41, 55, 0.6) !important;
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
-    .div_bootstrap:hover {
-        box-shadow: 0 0 15px purple;
-    }
-    
-    .div_js {
-        box-shadow: 1px 1px 5px 0.1px yellow;
-    }
-
-    .div_js:hover {
-        box-shadow: 0 0 15px yellow;
-    }
-    
-    .div_java {
-        box-shadow: 1px 1px 5px 0.1px red;
+    #habilidades .section-title {
+        position: relative;
+        display: inline-block;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
     }
 
-    .div_java:hover {
-        box-shadow: 0 0 15px red;
-    }
-    
-    .div_python {
-        box-shadow: 1px 1px 5px 0.1px rgb(0, 14, 94);
-    }
-
-    .div_python:hover {
-        box-shadow: 0 0 15px rgb(0, 14, 94);
-    }
-    
-    .div_laravel {
-        box-shadow: 1px 1px 5px 0.1px rgb(122, 1, 1);
+    #habilidades .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #334155, transparent);
     }
 
-    .div_laravel:hover {
-        box-shadow: 0 0 15px rgb(122, 1, 1);
-    }
-    
-    .div_sql {
-        box-shadow: 1px 1px 5px 0.1px rgba(255, 208, 0, 0.925);
-    }
-
-    .div_sql:hover {
-        box-shadow: 0 0 15px rgba(255, 208, 0, 0.925);
-    }
-    
-    /* Estilos para nuevas habilidades */
-    .div_fastapi {
-        box-shadow: 1px 1px 5px 0.1px teal;
-    }
-
-    .div_fastapi:hover {
-        box-shadow: 0 0 15px teal;
-    }
-    
-    .div_vuejs {
-        box-shadow: 1px 1py 5px 0.1px green;
-    }
-
-    .div_vuejs:hover {
-        box-shadow: 0 0 15px green;
-    }
-    
-    .div_nodejs {
-        box-shadow: 1px 1px 5px 0.1px rgb(50, 205, 50);
-    }
-
-    .div_nodejs:hover {
-        box-shadow: 0 0 15px rgb(50, 205, 50);
-    }
-    
-    .div_php {
-        box-shadow: 1px 1px 5px 0.1px purple;
-    }
-
-    .div_php:hover {
-        box-shadow: 0 0 15px purple;
+    #habilidades .skills-content {
+        background: transparent !important;
+        border: none !important;
     }
 /* End of Habilidades */
-
