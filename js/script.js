@@ -40,3 +40,4 @@ if (textarea) {
         textarea.focus();
     });
 }
+

@@ -1,5 +1,6 @@
+/* General / body     */
     body {
-        background: linear-gradient(45deg, #0f172a, #1e293b, #334155, #475569);
+        background: linear-gradient(45deg, #000000, #1e293b, #161e2b, #000000);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
         min-height: 100vh;
@@ -23,25 +24,142 @@
         text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
 
-    .nav-link:hover {
-        color: #ffffff !important;
-        background-color: rgba(51, 65, 85, 0.6);
-        border-radius: 5px;
-    }
-
-    .nav-link:hover::after {
-        background-color: #ffffff;
-        width: 100%;
-    }
-
+    
     #sobre_mi, #proyectos, #habilidades {
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(10px);
     }
-/* Navbar */   
+/* End of general / body */
+
+/* Navbar */  
+.nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(51, 65, 85, 0.6);
+    border-radius: 5px;
+}
+
+.nav-link:hover::after {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #334155;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #98a5b8 !important;
+}
+
+/* Menu lateral (Offcanvas) */
+.offcanvas {
+    background-color: #334155;
+    width: 250px; /* Tamaño del menú lateral */
+    position: fixed; /* Asegura que el menú quede fijo */
+    top: 0;
+    right: 0; /* Lo coloca en el lado derecho de la pantalla */
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* Menú oculto por defecto, fuera de la pantalla a la derecha */
+}
+
+.offcanvas-header {
+    background-color: #475569;
+}
+
+.offcanvas-title {
+    color: #f9fafb;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-link {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #f9fafb !important;
+}
+
+.nav-link:hover {
+    background-color: rgba(51, 65, 85, 0.6);
+    border-radius: 5px;
+}
+
+.nav-link:hover::after {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #334155;
+    transition: width 0.3s ease;
+}
+
+/* Asegurar que el contenido no se desplace cuando el menú lateral se activa */
+body {
+    overflow-x: hidden;
+}
+
+/* Esconder el menú tradicional cuando se muestra el offcanvas en pantallas pequeñas */
+@media (max-width: 991px) {
+    /* Ocultar el menú tradicional cuando el offcanvas está activo */
+    .navbar-collapse {
+        display: none;
+    }
+
+    /* Mostrar solo el menú lateral en pantallas pequeñas */
+    .offcanvas {
+        display: block !important;
+        transform: translateX(0); /* Deslizar el menú lateral desde la derecha */
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    /* Agregar margin-bottom al último elemento del menú colapsado para separación con el botón de descarga */
+    .offcanvas-body .nav-item:last-child {
+        margin-bottom: 20px; /* Puedes ajustar este valor según tu preferencia */
+    }
+}
+
+/* Mostrar el menú tradicional a la derecha en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto; /* Alinea el menú a la derecha */
+    }
+
+    /* Restaurar el comportamiento tradicional del menú no colapsado */
+    .offcanvas {
+        display: none !important;
+    }
+
     .nav-link {
         position: relative;
         transition: color 0.3s ease;
+        font-size: 16px;
+        margin-right: 10px;
     }
 
     .nav-link::after {
@@ -62,54 +180,17 @@
     .nav-link:hover::after {
         width: 100%;
     }
+}
 
-    .navbar-collapse {
-        transition: all 0.3s ease-in-out;
-    }
+/* Estilos adicionales para el offcanvas cuando está abierto */
+.offcanvas.show {
+    transform: translateX(0); /* Desliza el menú hacia la izquierda cuando está abierto */
+}
 
-    .navbar-collapse.collapsing {
-        opacity: 0;
-    }
-
-    .navbar-collapse.show {
-        opacity: 1;
-    }
-
-    @media (max-width: 991px) { 
-        .navbar-collapse {
-            background-color: rgba(0, 0, 0, 0.95);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 1rem;
-            border: 2px solid #334155;
-        }
-        
-        .nav-item {
-            margin: 0.5rem 0 !important; 
-            text-align: center;
-        }
-        
-        .navbar-nav {
-            gap: 0.5rem; 
-        }
-
-        .nav-link:hover {
-            background-color: #cbd5e1;
-            border-radius: 5px;
-        }
-    }
-
-    @media (min-width: 992px) and (max-width: 1040px) { 
-        .nav-item {
-            margin: 0.5rem 0 !important; 
-            text-align: center;
-        }
-        
-        .nav-link:hover {
-            background-color: #94a3b8;
-            border-radius: 5px;
-        }
-    }
+/* Asegura que los botones de cierre del menú lateral no se desborden */
+.offcanvas-header .btn-close {
+    color: #f9fafb;
+}
 /* End of Navbar */
 
 /* CV Button */
@@ -216,11 +297,12 @@
         position: relative;
         display: inline-block;
         color: white;
-        font-weight: 300;
+        font-weight: 400; /* Aumentamos el grosor de la fuente */
         letter-spacing: 1.5px;
         margin-bottom: 20px;
+        text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); /* Aumentamos la intensidad del glow */
     }
-
+    
     #sobre_mi .section-title::after {
         content: '';
         position: absolute;
@@ -244,21 +326,24 @@
             gap: 15px;
         }
 
+        .descripcion {
+            font-size: 14px;
+        }
+
         #sobre_mi .social-links .btn {
-            width: 60%; /* Hace que cada botón ocupe el 45% del ancho, dejando espacio entre ellos */
+            width: 80%; /* Hace que cada botón ocupe el 45% del ancho, dejando espacio entre ellos */
         }
 
         /* Coloca los botones en forma de pirámide invertida */
         #sobre_mi .social-links .btn:nth-child(1),
         #sobre_mi .social-links .btn:nth-child(2) {
-            width: 60%; /* Los dos primeros botones ocuparán el 45% del ancho */
+            width: 80%; /* Los dos primeros botones ocuparán el 45% del ancho */
         }
 
         #sobre_mi .social-links .btn:nth-child(3) {
-            width: 60%; /* El último botón ocupa el 90% y se centra */
+            width: 80%; /* El último botón ocupa el 90% y se centra */
         }
     }
-
 /* End of sobre mi */
 
 /* Estilos para Proyectos */    
@@ -281,11 +366,12 @@
         position: relative;
         display: inline-block;
         color: white;
-        font-weight: 300;
+        font-weight: 400; /* Aumentamos el grosor de la fuente */
         letter-spacing: 1.5px;
         margin-bottom: 20px;
+        text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); /* Aumentamos la intensidad del glow */
     }
-
+    
     #proyectos .section-title::after {
         content: '';
         position: absolute;
@@ -323,11 +409,12 @@
         position: relative;
         display: inline-block;
         color: white;
-        font-weight: 300;
+        font-weight: 400; /* Aumentamos el grosor de la fuente */
         letter-spacing: 1.5px;
         margin-bottom: 20px;
+        text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); /* Aumentamos la intensidad del glow */
     }
-
+    
     #habilidades .section-title::after {
         content: '';
         position: absolute;
@@ -337,6 +424,7 @@
         height: 2px;
         background: linear-gradient(to right, transparent, #334155, transparent);
     }
+    
 
     #habilidades .skills-content {
         background: transparent !important;
@@ -423,6 +511,4 @@
             margin: 0rem; /* Reducir el margen entre las tarjetas */
         }
     }
-
-
 /* End of Habilidades */
