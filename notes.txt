@@ -2,7 +2,3 @@
 2. En proyectos poner 2 apartados:
     Desarrollados.
     En desarrolando.
-3. Agregar 3 apartados para el de habilidades:
-    Lenguajes: Python, Java, JavaScript, PHP, MYSQL/SQL.
-    Frameworks: FastAPI, VueJS, NodeJS, Laravel, Bootstrap.
-    Herramientas: Vercel, Render, MySQL Workbench, Notion, Jira, Github.
