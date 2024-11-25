@@ -1,6 +1,6 @@
 /* General / body     */
     body {
-        background: linear-gradient(45deg, #000000, #1e293b, #161e2b, #000000);
+        background: linear-gradient(45deg, #000000, #090c11, #0b0e14, #000000);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
         min-height: 100vh;
@@ -32,134 +32,65 @@
 /* End of general / body */
 
 /* Navbar */  
-.nav-link:hover {
-    color: #ffffff !important;
-    background-color: rgba(51, 65, 85, 0.6);
-    border-radius: 5px;
-}
-
-.nav-link:hover::after {
-    background-color: #ffffff;
-    width: 100%;
-}
-
-.nav-link {
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #334155;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #98a5b8 !important;
-}
-
-/* Menu lateral (Offcanvas) */
-.offcanvas {
-    background-color: #334155;
-    width: 250px; /* Tamaño del menú lateral */
-    position: fixed; /* Asegura que el menú quede fijo */
-    top: 0;
-    right: 0; /* Lo coloca en el lado derecho de la pantalla */
-    height: 100%; /* Ocupa toda la altura de la pantalla */
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%); /* Menú oculto por defecto, fuera de la pantalla a la derecha */
-}
-
-.offcanvas-header {
-    background-color: #475569;
-}
-
-.offcanvas-title {
-    color: #f9fafb;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.nav-link {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #f9fafb !important;
-}
-
-.nav-link:hover {
-    background-color: rgba(51, 65, 85, 0.6);
-    border-radius: 5px;
-}
-
-.nav-link:hover::after {
-    background-color: #ffffff;
-    width: 100%;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #334155;
-    transition: width 0.3s ease;
-}
-
-/* Asegurar que el contenido no se desplace cuando el menú lateral se activa */
-body {
-    overflow-x: hidden;
-}
-
-/* Esconder el menú tradicional cuando se muestra el offcanvas en pantallas pequeñas */
-@media (max-width: 991px) {
-    /* Ocultar el menú tradicional cuando el offcanvas está activo */
-    .navbar-collapse {
-        display: none;
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
-    /* Mostrar solo el menú lateral en pantallas pequeñas */
-    .offcanvas {
-        display: block !important;
-        transform: translateX(0); /* Deslizar el menú lateral desde la derecha */
+    .navbar-toggler-icon:hover {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2398a5b8' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
     .navbar-toggler {
-        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .navbar-toggler:hover {
+        transform: scale(1.1);
+        background-color: rgba(254, 254, 255, 0.212);
+        border-radius: 5px;
     }
 
-    /* Agregar margin-bottom al último elemento del menú colapsado para separación con el botón de descarga */
-    .offcanvas-body .nav-item:last-child {
-        margin-bottom: 20px; /* Puedes ajustar este valor según tu preferencia */
-    }
-}
-
-/* Mostrar el menú tradicional a la derecha en pantallas grandes */
-@media (min-width: 992px) {
-    .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        margin-left: auto; /* Alinea el menú a la derecha */
+    .offcanvas-header .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%); /* Makes the close button white */
+        opacity: 0.7;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
-    /* Restaurar el comportamiento tradicional del menú no colapsado */
-    .offcanvas {
-        display: none !important;
+    .offcanvas-header .btn-close:hover {
+        opacity: 1;
+        transform: scale(1.2);
+        filter: invert(1) grayscale(100%) brightness(250%); /* Slightly brighter on hover */
+    }
+
+    .offcanvas.hiding {
+        animation: slideOutRight 0.3s ease-in-out forwards;
+    }
+
+    @keyframes slideOutRight {
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+
+    .nav-link:hover {
+        color: #ffffff !important;
+        background-color: rgba(51, 65, 85, 0.6);
+        border-radius: 5px;
+    }
+
+    .nav-link:hover::after {
+        background-color: #ffffff;
+        width: 100%;
     }
 
     .nav-link {
         position: relative;
         transition: color 0.3s ease;
-        font-size: 16px;
-        margin-right: 10px;
     }
 
     .nav-link::after {
@@ -177,20 +108,120 @@ body {
         color: #98a5b8 !important;
     }
 
+    .offcanvas {
+        background-color: #334155;
+        width: 250px; 
+        position: fixed; 
+        top: 0;
+        right: 0; 
+        height: 100%; 
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%); 
+    }
+
+    .offcanvas-header {
+        background-color: #475569;
+    }
+
+    .offcanvas-title {
+        color: #f9fafb;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #f9fafb !important;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(51, 65, 85, 0.6);
+        border-radius: 5px;
+    }
+
     .nav-link:hover::after {
+        background-color: #ffffff;
         width: 100%;
     }
-}
 
-/* Estilos adicionales para el offcanvas cuando está abierto */
-.offcanvas.show {
-    transform: translateX(0); /* Desliza el menú hacia la izquierda cuando está abierto */
-}
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #334155;
+        transition: width 0.3s ease;
+    }
 
-/* Asegura que los botones de cierre del menú lateral no se desborden */
-.offcanvas-header .btn-close {
-    color: #f9fafb;
-}
+    body {
+        overflow-x: hidden;
+    }
+
+    @media (max-width: 991px) {
+        .navbar-collapse {
+            display: none;
+        }
+
+
+        .navbar-toggler {
+            display: block;
+        }
+
+        .offcanvas-body .nav-item:last-child {
+            margin-bottom: 20px; 
+        }
+    }
+
+    @media (min-width: 992px) {
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto; 
+        }
+
+        .offcanvas {
+            display: none !important;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #334155;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #98a5b8 !important;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    }
+
+    .offcanvas.show {
+        transform: translateX(0); 
+    }
+
+    .offcanvas-header .btn-close {
+        color: #f9fafb;
+    }
 /* End of Navbar */
 
 /* CV Button */
@@ -199,7 +230,7 @@ body {
     }
 
     .div_descarga a {
-        display: inline-block; /* Añadido para mejor control del elemento */
+        display: inline-block; 
         color: rgba(255, 255, 255, 0.7);
         font-size: 16px;
         font-weight: bold;
@@ -207,16 +238,16 @@ body {
     }
 
     #btn_descargar_cv {
-        position: relative; /* Cambiado a position relative */
+        position: relative; 
         padding: 8px 25px;
         border-radius: 25px;
         text-decoration: none;
         border: 2px solid rgba(255, 255, 255, 0.2);
-        overflow: hidden; /* Importante para contener la animación */
-        z-index: 1; /* Para asegurar que el texto esté sobre la animación */
+        overflow: hidden; 
+        z-index: 1; 
     }
 
-    #btn_descargar_cv::before { /* Nuevo pseudo-elemento para la animación */
+    #btn_descargar_cv::before { 
         content: '';
         position: absolute;
         top: 0;
@@ -282,7 +313,7 @@ body {
     }
 
     #sobre_mi .about-content {
-        background: transparent !important;
+        background-color: rgba(31, 41, 55, 0.6) !important;    
         border: none !important;
     }
 
@@ -297,10 +328,10 @@ body {
         position: relative;
         display: inline-block;
         color: white;
-        font-weight: 400; /* Aumentamos el grosor de la fuente */
+        font-weight: 400; 
         letter-spacing: 1.5px;
         margin-bottom: 20px;
-        text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); /* Aumentamos la intensidad del glow */
+        text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); 
     }
     
     #sobre_mi .section-title::after {
@@ -317,12 +348,11 @@ body {
         font-size: 17px;
     }
 
-    /* Media Query para resoluciones entre 370px y 490px */
     @media (max-width: 490px) and (min-width: 370px) {
         #sobre_mi .social-links {
             display: flex;
-            flex-wrap: wrap; /* Permite que los botones se ajusten en varias líneas */
-            justify-content: space-evenly; /* Distribuye los elementos de manera uniforme */
+            flex-wrap: wrap; 
+            justify-content: space-evenly; 
             gap: 15px;
         }
 
@@ -331,17 +361,16 @@ body {
         }
 
         #sobre_mi .social-links .btn {
-            width: 80%; /* Hace que cada botón ocupe el 45% del ancho, dejando espacio entre ellos */
+            width: 90%; 
         }
 
-        /* Coloca los botones en forma de pirámide invertida */
         #sobre_mi .social-links .btn:nth-child(1),
         #sobre_mi .social-links .btn:nth-child(2) {
-            width: 80%; /* Los dos primeros botones ocuparán el 45% del ancho */
+            width: 90%; 
         }
 
         #sobre_mi .social-links .btn:nth-child(3) {
-            width: 80%; /* El último botón ocupa el 90% y se centra */
+            width: 90%; 
         }
     }
 /* End of sobre mi */
@@ -366,10 +395,10 @@ body {
         position: relative;
         display: inline-block;
         color: white;
-        font-weight: 400; /* Aumentamos el grosor de la fuente */
+        font-weight: 400; 
         letter-spacing: 1.5px;
         margin-bottom: 20px;
-        text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); /* Aumentamos la intensidad del glow */
+        text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); 
     }
     
     #proyectos .section-title::after {
@@ -409,7 +438,7 @@ body {
         position: relative;
         display: inline-block;
         color: white;
-        font-weight: 400; /* Aumentamos el grosor de la fuente */
+        font-weight: 400; 
         letter-spacing: 1.5px;
         margin-bottom: 20px;
         text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); /* Aumentamos la intensidad del glow */
@@ -490,25 +519,23 @@ body {
         background-color: rgba(51, 65, 85, 0.7);
     }
 
-
-    /* Ajustes para pantallas entre 768px y 991px */
     @media (min-width: 768px) and (max-width: 991px) {
         
 
         .card-header h4 {
-            font-size: 1.25rem; /* Reducir el tamaño de los encabezados en las cards */
+            font-size: 1.25rem; 
         }
 
         .skill-item {
-            font-size: 1rem; /* Reducir el tamaño de la fuente de los items */
+            font-size: 1rem; 
         }
 
         .skill-item i {
-            font-size: 1.8rem; /* Reducir el tamaño de los iconos */
+            font-size: 1.8rem; 
         }
 
         .card {
-            margin: 0rem; /* Reducir el margen entre las tarjetas */
+            margin: 0rem; 
         }
     }
 /* End of Habilidades */

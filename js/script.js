@@ -41,3 +41,32 @@ if (textarea) {
     });
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const offcanvasElement = document.getElementById('offcanvasNavbar');
+    const offcanvasLinks = offcanvasElement.querySelectorAll('.nav-link[href^="#"]');
+    
+    offcanvasLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Prevent default anchor behavior
+            e.preventDefault();
+            
+            // Hide the offcanvas
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+            if (offcanvas) {
+                offcanvas.hide();
+            }
+            
+            // Get the target section
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            // Scroll to the target section with a slight delay to ensure offcanvas is closed
+            if (targetSection) {
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            }
+        });
+    });
+});

@@ -1,8 +1,4 @@
-1. Arreglar responsive del menu collapse del navbar.
-3. Hacer CV y ponerlo en assets/docs. Posteriormente linkearlo al boton de descarga
-4. Cambiar foto de profile y ponerlo en assets/img Posteriormente linkearlo al apartado sobre mi
+1. Colocar apartado proyectos (Inspo repositorio usma)
+2. Hacer CV y ponerlo en assets/docs. Posteriormente linkearlo al boton de descarga
+3. Cambiar foto de profile y ponerlo en assets/img Posteriormente linkearlo al apartado sobre mi
 
-Cambiar el hover negro del menu collapse
-Cambiar que salga desde la derecha hacia la izquierda el menu collapse
-Cambiar el color de la X del menu collapse
-Darle mas margen al menu lateral para el boton de descargar
