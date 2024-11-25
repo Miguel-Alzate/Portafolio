@@ -26,8 +26,4 @@ Portafolio personal que muestra mis proyectos, habilidades y trayectoria como de
 - Email: [miguelangel4817@gmail.com]
 - WhatsApp: [https://w.app/Rn74aC]
 
-## 📄 Licencia
-Este proyecto está bajo la Licencia MIT.
-
----
 © 2024 Miguel Angel Alzate. Todos los derechos reservados.
