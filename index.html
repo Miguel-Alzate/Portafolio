@@ -41,7 +41,7 @@
                                     <a href="#habilidades" class="nav-link text-white fw-bold mb-4" data-bs-dismiss="offcanvas">Habilidades</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" id="btn_descargar_cv" class="nav-link text-white fw-bold" download data-bs-dismiss="offcanvas">DESCARGAR CV</a>
+                                    <a id="btn_descargar_cv" class="nav-link  text-white fw-bold" href="docs/Currículum - Sebastian Usma.pdf" download="Currículum - Sebastian Usma.pdf">DESCARGAR CV</a>
                                 </li>
                             </ul>
                         </div>
@@ -59,7 +59,7 @@
                                 <a class="nav-link  text-white fw-bold" href="#habilidades">Habilidades</a>
                             </li>
                             <li class="nav-item">
-                                <a id="btn_descargar_cv" class="nav-link  text-white fw-bold" href="#" download>DESCARGAR CV</a>
+                                <a id="btn_descargar_cv" class="nav-link  text-white fw-bold" href="docs/Currículum - Sebastian Usma.pdf" download="Currículum - Sebastian Usma.pdf">DESCARGAR CV</a>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="about-content p-4 rounded-3 shadow-lg" style="border: 2px solid">
-                                <p class="descripcion">Soy un desarrollador de software especializado en backend, actualmente cursando el programa de Análisis y Desarrollo de Software del SENA. Mi pasión se centra en construir soluciones tecnológicas robustas y eficientes, con un enfoque particular en el desarrollo de sistemas backend que impulsan el rendimiento y la funcionalidad de aplicaciones web y móviles.</p>
+                                <p class="descripcion">¡Hola! Soy Miguel Angel Alzate, un desarrollador de software especializado en backend, actualmente estoy cursando el programa de Análisis y Desarrollo de Software del SENA. Mi pasión se centra en construir soluciones tecnológicas robustas y eficientes, con un enfoque particular en el desarrollo de sistemas backend que impulsan el rendimiento y la funcionalidad de aplicaciones web y móviles.</p>
                                 <div class="social-links mt-4">
                                     <a href="https://github.com/Miguel-Alzate" target="_blank" 
                                        class="btn btn-outline-light mx-2 social-icon">
@@ -102,18 +102,68 @@
                     </div>
                 </div>
         
-                <div class="col-12 mt-4 p-5" id="proyectos">
-                    <div class="row justify-content-center text-center">
+                <div class="col-12 p-5" id="proyectos">
+                    <div class="row justify-content-center">
                         <div class="col-12 mb-4">
-                            <h2 class="section-title position-relative d-inline-block text-white pb-2">
-                                Proyectos
-                                <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color:  #475569;"></span>
-                            </h2>
+                            <div class="text-center">
+                                <h2 class="section-title position-relative d-inline-block text-white pb-2">
+                                    Proyectos
+                                    <span class="title-underline position-absolute bottom-0 start-0 w-100" style="height: 3px; background-color:  #475569;"></span>
+                                </h2>
+                            </div>
+                            
+                            <div class="row">   
+                                <div class="col-lg-6 col-sm-12 pt-3 rounded">
+                                    <strong class="text-start">Portal RREDSI</strong>
+                                    <div class="col-12 mt-2">
+                                        <img class="imagen_proyecto rounded img-fluid" src="assets/img/proyecto_rredsi.png" alt="Imagen del proyecto Portal RREDSI">
+                                    </div>
+                                    <div class="mt-1">
+                                        <strong>Descripción</strong>
+                                        <p class="descripcion_proyecto">Este proyecto fue desarrollado por mí y un equipo de compañeros de clase como parte de un esfuerzo colaborativo para crear un aplicativo web dirigido a la empresa RREDSI. El sistema abarca todo el proceso de gestión de proyectos investigativos de la empresa, desde la inscripción de nuevos proyectos, hasta su evaluación y la publicación de los resultados finales.
+                                    </div>
+                                    <div class="row justify-content-between ">
+                                        <div class="col-5 col-sm-5 fs-5">
+                                            <i class="mx-1 fa-brands fa-html5" style="color:rgb(255, 123, 0)" title="HTML5"></i>
+                                            <i class="mx-1 fa-brands fa-bootstrap" style="color:purple" title="Bootstrap"></i>
+                                            <i class="mx-1 fa-brands fa-js" style="color: yellow;" title="JavaScript"></i>
+                                            <i class="mx-1 fa-brands fa-vuejs" style="color:#42b883" title="VueJS"></i>
+                                            <i class="mx-1 fa-brands fa-php" style="color:#777bb3" title="PHP"></i>
+                                            <i class="mx-1 fas fa-code" style="color:#009688" title="FastAPI"></i>
+                                            <i class="mx-1 fas fa-database" style="color: #00758f" title="MySQL"></i>
+                                        </div>
+                                        <div class="col-5 col-sm-7 text-end">
+                                            <a class="icon_redes me-2 fs-5" href="https://github.com/karenscortes/proyectoRREDSI"  title="Haz click para ir al repositorio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                            <a class="icon_redes fs-5" href="https://proyecto-rredsi.vercel.app/"  title="Ver proyecto desplegado" target="_blank"> Ver <i class="fa-solid fa-square-arrow-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-12 pt-3 rounded">
+                                    <strong class="text-start">FarmaTECH - Farmacia Digital</strong>
+                                    <div class="col-12 mt-2">
+                                        <img class="imagen_proyecto rounded img-fluid" src="assets/img/proyecto_rredsi.png" alt="Imagen del proyecto Portal RREDSI">
+                                    </div>
+                                    <div class="mt-1">
+                                        <strong>Descripción</strong>
+                                        <p class="descripcion_proyecto">Farmatech es una farmacia digital desarrollada en Java, que permite a los usuarios comprar medicamentos, generar facturas en PDF y agregar nuevas farmacias al sistema. La plataforma cuenta con una interfaz para diferentes tipos de usuarios, como clientes, farmacéuticos y administradores, facilitando la gestión y compra de productos farmacéuticos en línea.
+                                    </div>
+                                    <div class="row justify-content-between ">
+                                        <div class="col-5 col-sm-5 fs-5">
+                                            <i class="mx-1 fab fa-java" style="color: #f89820" title="Java"></i>
+                                            <i class="mx-1 fas fa-database" style="color: #00758f" title="MySQL"></i>
+                                        </div>
+                                        <div class="col-5 col-sm-7 text-end">
+                                            <a class="icon_redes social-icon me-2 fs-5" href="https://github.com/MaribelOJ/FARMATECH" title="Haz click para ir al repositorio" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
                         </div>
                     </div>
                 </div>
         
-                <div class="col-12 mt-4 p-5" id="habilidades">  
+                <div class="col-12 p-5" id="habilidades">  
                     <div class="row justify-content-center text-center">
                         <div class="col-12 mb-4">
                             <h2 class="section-title position-relative d-inline-block text-white pb-2">
