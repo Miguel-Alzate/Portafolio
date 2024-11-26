@@ -384,6 +384,18 @@
     .descripcion_proyecto{
         font-size: 15px;
     }
+
+    .imagen_proyecto, .imagen_proyecto_rr{
+        height: 300px;
+        width: 600px;
+    }   
+
+    @media (max-width: 600px) and (min-width: 370px) {
+        .imagen_proyecto{
+            height: 200px;
+            width: 600px;
+        }  
+    }
     
     .icon_redes{
         text-decoration: none;
