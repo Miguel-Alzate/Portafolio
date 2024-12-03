@@ -355,7 +355,7 @@
     }
 /* End of sobre mi */
 
-/* Estilos para Proyectos */    
+/* Proyectos */    
     #proyectos .section-title {
         position: relative;
         display: inline-block;
@@ -365,7 +365,7 @@
         margin-bottom: 20px;
         text-shadow: 0 0 15px rgba(51, 65, 85, 1), 0 0 20px rgba(51, 65, 85, 0.8), 0 0 30px rgba(51, 65, 85, 0.6); 
     }
-    
+
     #proyectos .section-title::after {
         content: '';
         position: absolute;
@@ -385,26 +385,50 @@
         font-size: 15px;
     }
 
-    .imagen_proyecto, .imagen_proyecto_rr{
+    /* Nuevo contenedor para las imágenes */
+    .proyecto-imagen-container {
+        background-color: rgba(31, 41, 55, 0.6);
+        border: 1px solid #334155;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .proyecto-imagen-container:hover {
+        transform: translateY(-10px);
+        background-color: rgba(31, 41, 55, 0.8);
+        border-color: rgba(255, 255, 255, 0.397);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .imagen_proyecto, .imagen_proyecto_rr {
         height: 300px;
-        width: 600px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: all 0.3s ease;
     }   
 
+    .imagen_proyecto:hover, .imagen_proyecto_rr:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
     @media (max-width: 600px) and (min-width: 370px) {
-        .imagen_proyecto{
+        .imagen_proyecto {
             height: 200px;
-            width: 600px;
         }  
     }
-    
-    .icon_redes{
+
+    .icon_redes {
         text-decoration: none;
         font-size: 40px;
         color: rgb(173, 173, 173);
         animation: borde 3s infinite;
     }
 
-    .icon_redes:hover{
+    .icon_redes:hover {
         color: white;
     }
     

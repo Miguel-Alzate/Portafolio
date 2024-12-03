@@ -1,3 +1,0 @@
-1. Hacer CV y ponerlo en assets/docs. Posteriormente linkearlo al boton de descarga
-2. Cambiar foto de profile y ponerlo en assets/img Posteriormente linkearlo al apartado sobre mi
-
