@@ -276,14 +276,17 @@
         justify-content: center;
         margin-bottom: 20px;
     }
+
     
     .profile-image {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #334155;
         box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        image-rendering: -webkit-optimize-contrast;
+        transform: scale(1.01); /* Evita antialiasing en algunos navegadores */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
